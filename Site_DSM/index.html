@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSM — Fatec Zona Leste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,480;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- Header fixo no topo com a barra vermelha e a identificação -->
+<header class="top-bar">
+  <div class="mark reveal reveal-1">
+    <div class="mark-square">Ft</div>
+    <div class="mark-text">Fatec Zona Leste <span>· Centro Paula Souza</span></div>
+  </div>
+</header>
+
+<div class="stage">
+  <div class="left">
+    <div class="headline-block">
+      <div class="eyebrow reveal reveal-2">Curso Superior de Tecnologia</div>
+      <h1 class="reveal reveal-3">Desenvolvimento de <em>Software</em> Multiplataforma</h1>
+      <p class="lede reveal reveal-4">Formação para projetar, desenvolver e testar software para web, desktop, dispositivos móveis, nuvem e internet das coisas — dos fundamentos de programação à segurança da informação e à inteligência artificial.</p>
+
+      <div class="actions reveal reveal-5">
+        <button class="action-btn primary" onclick="openModal('sobre')">Sobre o curso</button>
+        <button class="action-btn" onclick="openModal('grade')">Grade curricular</button>
+        <button class="action-btn" onclick="openModal('perfil')">Perfil profissional</button>
+        <button class="action-btn" onclick="openModal('documentos')">Documentos</button>
+        <button class="action-btn" onclick="openModal('diferenciais')">Diferenciais do curso</button>
+        <button class="action-btn" onclick="openModal('info-comp')">Info complementar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Rodapé fixado na parte inferior da tela -->
+<footer class="foot-row reveal reveal-5">
+  <span>Coordenação: Prof. Me. Edson Company Colalto Junior</span>
+  <button onclick="openModal('contato')">Contato e endereço →</button>
+</footer>
+
+<!-- ===== MODAIS ===== -->
+<div class="overlay" id="overlay-sobre" onclick="closeOnBackdrop(event,'sobre')">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-kicker">01 — Apresentação</div>
+        <div class="modal-title">Sobre o curso</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('sobre')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>O Curso Superior de Tecnologia em Desenvolvimento de Software Multiplataforma prepara o estudante para criar soluções que funcionam em <strong>diferentes ambientes</strong> — sites, aplicativos desktop, dispositivos móveis, sistemas em nuvem e internet das coisas — combinando teoria e prática desde o primeiro semestre.</p>
+      <p>Entre as disciplinas do curso estão matemática para computação, álgebra linear, redação técnica, ética profissional e patente, metodologias ágeis para gestão de projetos de software e inglês, além de lógica de programação, programação para desktop, dispositivos móveis e web, experiência do usuário, computação em nuvem, inteligência artificial, segurança da informação, internet das coisas, banco de dados e engenharia de software.</p>
+      <p>O tecnólogo formado realiza análise estatística de dados para apoiar clientes em tomadas de decisão e pode coordenar projetos e equipes de desenvolvimento de software.</p>
+      <div class="contact-row" style="margin-top:20px;">
+        <div class="lbl">coordenação</div>
+        <div>Prof. Me. Edson Company Colalto Junior<br><span style="color:var(--ink-soft); font-size:13.5px;">f111coord.dsm@cps.sp.gov.br</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay-grade" onclick="closeOnBackdrop(event,'grade')">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-kicker">02 — Estrutura</div>
+        <div class="modal-title">Grade curricular</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('grade')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>Conteúdo distribuído entre disciplinas básicas, técnicas e de linguagens de programação ao longo do curso.</p>
+      <div class="sem-grid">
+        <div class="sem-card"><div class="num">Básicas</div><div class="subs">Matemática para computação, álgebra linear, redação técnica, inglês</div></div>
+        <div class="sem-card"><div class="num">Profissionais</div><div class="subs">Ética profissional e patente, metodologias ágeis para gestão de projetos</div></div>
+        <div class="sem-card"><div class="num">Programação</div><div class="subs">Lógica de programação e algoritmo, programação para desktop, dispositivos móveis e web</div></div>
+        <div class="sem-card"><div class="num">Dados e infraestrutura</div><div class="subs">Banco de dados, computação em nuvem, internet das coisas</div></div>
+        <div class="sem-card"><div class="num">Qualidade e segurança</div><div class="subs">Engenharia de software, segurança da informação</div></div>
+        <div class="sem-card"><div class="num">Experiência e IA</div><div class="subs">Experiência do usuário, inteligência artificial</div></div>
+      </div>
+      <p class="note">Disciplinas agrupadas por eixo temático a título de referência — consulte o Projeto Pedagógico do curso para a matriz curricular completa.</p>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay-perfil" onclick="closeOnBackdrop(event,'perfil')">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-kicker">03 — Mercado</div>
+        <div class="modal-title">Perfil profissional</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('perfil')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>O tecnólogo formado projeta, desenvolve e testa software para múltiplas plataformas, aplicações em nuvem e internet das coisas. Seleciona e aplica conceitos, métodos e tecnologias de linguagens de programação, banco de dados, engenharia de software, segurança da informação e inteligência artificial para propor soluções tecnológicas.</p>
+      <p>Também realiza <strong>análise estatística de dados</strong> para apoiar clientes em tomadas de decisão, além de poder assumir a coordenação de projetos e equipes de desenvolvimento.</p>
+      <div class="trait-list">
+        <div class="trait"><div class="n">→</div><div class="t"><strong>Projeto e desenvolvimento</strong>Apresentação de soluções tecnológicas a partir de linguagens de programação, banco de dados e engenharia de software.</div></div>
+        <div class="trait"><div class="n">→</div><div class="t"><strong>Análise de dados</strong>Coleta e análise estatística de dados para apoiar decisões de clientes.</div></div>
+        <div class="trait"><div class="n">→</div><div class="t"><strong>Coordenação</strong>Gestão de projetos e equipes de desenvolvimento de software.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay-diferenciais" onclick="closeOnBackdrop(event,'diferenciais')">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-kicker">04 — Metodologia</div>
+        <div class="modal-title">Diferenciais</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('diferenciais')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="trait-list">
+        <div class="trait"><div class="n">01</div><div class="t"><strong>Multiplataforma de verdade</strong>O curso cobre desktop, dispositivos móveis, web, nuvem e internet das coisas dentro da mesma matriz.</div></div>
+        <div class="trait"><div class="n">02</div><div class="t"><strong>Metodologias ágeis</strong>A gestão de projetos de software é ensinada com as mesmas práticas usadas por equipes de desenvolvimento no mercado.</div></div>
+        <div class="trait"><div class="n">03</div><div class="t"><strong>Segurança e IA aplicadas</strong>Segurança da informação e inteligência artificial entram como conteúdos específicos da área, não só como conceitos teóricos.</div></div>
+        <div class="trait"><div class="n">04</div><div class="t"><strong>Ensino presencial</strong>Aulas no período matutino, das 08h às 11h30, na unidade Fatec Zona Leste.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay-documentos" onclick="closeOnBackdrop(event,'documentos')">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-kicker">05 — Arquivos</div>
+        <div class="modal-title">Documentos</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('documentos')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>Materiais oficiais disponibilizados pela Fatec Zona Leste para o curso de DSM.</p>
+      <a class="doc-link" href="https://fateczl.edu.br/arquivos/DSM.pdf" target="_blank" rel="noopener">
+        <span class="name">Horário — período da manhã</span>
+        <span class="ext">PDF ↗</span>
+      </a>
+      <a class="doc-link" href="https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/137/2026/07/PPC-DesenvolvimentoSoftwareMultiplataformaFatecZLCesu-V1_2-2026.pdf" target="_blank" rel="noopener">
+        <span class="name">Projeto Pedagógico do Curso</span>
+        <span class="ext">PDF ↗</span>
+      </a>
+      <p class="note">Os arquivos abrem em uma nova guia, direto do site oficial da Fatec Zona Leste.</p>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay-info-comp" onclick="closeOnBackdrop(event,'info-comp')">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-kicker">06 — Detalhes</div>
+        <div class="modal-title">Informações complementares</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('info-comp')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="contact-row"><div class="lbl">turno</div><div>Matutino</div></div>
+      <div class="contact-row"><div class="lbl">horários</div><div>08h – 11h</div></div>
+      <div class="contact-row"><div class="lbl">modalidade</div><div>Presencial</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay-contato" onclick="closeOnBackdrop(event,'contato')">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-kicker">07 — Localização</div>
+        <div class="modal-title">Contato e endereço</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('contato')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="contact-row"><div class="lbl">unidade</div><div>Fatec Zona Leste</div></div>
+      <div class="contact-row"><div class="lbl">endereço</div><div>Av. Águia de Haia, 2.983 — Cidade A. E. Carvalho — São Paulo/SP — CEP 03694-000</div></div>
+      <div class="contact-row"><div class="lbl">telefone</div><div>(11) 2040-4100</div></div>
+      <div class="contact-row"><div class="lbl">funcionamento</div><div>Segunda a sexta, das 07:30 às 23:00</div></div>
+      <div class="contact-row"><div class="lbl">coordenação dsm</div><div>Prof. Me. Edson Company Colalto Junior<br><span style="color:var(--ink-soft); font-size:13.5px;">f111coord.dsm@cps.sp.gov.br</span></div></div>
+      <p class="note">Página de recriação acadêmica — para procedimentos oficiais, consulte o site da Fatec Zona Leste.</p>
+    </div>
+  </div>
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>
